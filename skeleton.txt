@@ -17,3 +17,5 @@ DS_PROJECT/
 |     |--Monthly revenue and profit
 |     |--Average Profit Margin per Product
 |     |--Revenue distribution across each age group
+|     |--Profit Margin vs Profit Amount per Product
+|     |--Profit by Sub-Category within Product Categories

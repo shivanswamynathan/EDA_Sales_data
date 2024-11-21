@@ -45,10 +45,6 @@
        Trend Identification: By examining the boxplots across years, you can spot trends in revenue generation for each age group, such as increasing or decreasing median revenue or changes in the spread of the                                data.
 
        Targeted Insights: This visualization offers insights that can be used for targeted marketing and sales strategies, enabling businesses to focus on age groups with higher revenue potential or adapt their                             approaches based on observed trends.
-
-   # Report on Profit Margin vs Profit Amount per Product:
-       - The code calculates the average profit margin for each product using the average_margin DataFrame created earlier.
-       - It also calculates the total profit amount for each product by subtracting the total cost from the total revenue.
        
    # Profit by Sub-Category within Product Categories:
        - The code groups the data by 'Product_Category' and 'Sub_Category' and calculates the total profit for each sub-category within each product category.

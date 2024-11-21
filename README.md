@@ -20,4 +20,40 @@
  # Relationship between Age and Revenue:
  The relationship class explores the relationship between 'Age_Group' and 'Revenue' using a bar chart, helping to identify potential trends in revenue generation across different age groups.
 
- #
+ # Max and Min Profit :
+ The max_min class calculates and visualizes the maximum and minimum profit for each 'Product_Category' using horizontal bar chart.
+ 
+ # Monthly Revenue and Profit :
+ The code calculates and plots the monthly revenue and profit trends over a specified time period, allowing users to analyze sales performance over time.
+
+ # Average Profit Margin per Product :
+    1 Calculate Profit Margin
+      - A new column 'profit_margin' is added to the DataFrame. 
+      -Profit margin is calculated using the formula: (Revenue - Cost) / Revenue. This represents the percentage of revenue that is profit for each sale.
+    2  Group by Product: 
+     -The DataFrame is grouped by the 'Product' column. -The mean() function is used to calculate the average profit margin for each product within its group. -The results are stored in a new DataFrame called 
+        average_margin.
+    3 Visualization: 
+    -A scatter plot is generated using matplotlib.pyplot. -The x-axis represents the 'Product', and the y-axis represents the 'Average Profit Margin (%)'. -Each point on the plot corresponds to a product and its 
+      average profit margin. 
+    -The size of each point can optionally be adjusted to represent another variable, such as the total profit amount for that product.
+    
+  # Revenue Distribution Across Each Age Group:
+       Visual Comparison: The boxplots provide a visual way to compare revenue distributions across different age groups within each year, allowing quick identification of groups with higher or lower median       
+                          revenue and variability in spending.
+
+       Trend Identification: By examining the boxplots across years, you can spot trends in revenue generation for each age group, such as increasing or decreasing median revenue or changes in the spread of the                                data.
+
+       Targeted Insights: This visualization offers insights that can be used for targeted marketing and sales strategies, enabling businesses to focus on age groups with higher revenue potential or adapt their                             approaches based on observed trends.
+
+   # Report on Profit Margin vs Profit Amount per Product:
+       - The code calculates the average profit margin for each product using the average_margin DataFrame created earlier.
+       - It also calculates the total profit amount for each product by subtracting the total cost from the total revenue.
+       
+   # Profit by Sub-Category within Product Categories:
+       - The code groups the data by 'Product_Category' and 'Sub_Category' and calculates the total profit for each sub-category within each product category.
+       - The results are stored in the category_stats DataFrame.
+       - The category_stats DataFrame is pivoted to create a table where product categories are rows, sub-categories are columns, and the values represent the total profit for each sub-category within the    corresponding product category.
+
+
+

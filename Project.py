@@ -95,12 +95,26 @@ class DataVisualizer:
         self.df['Date'] = pd.to_datetime(self.df['Date'])
         monthly_data = self.df.groupby(self.df['Date'].dt.to_period('M')).agg({'Revenue': 'sum', 'Profit': 'sum'}).reset_index()
         monthly_data['Date'] = monthly_data['Date'].dt.to_timestamp()
-        plt.plot(monthly_data['Date'], monthly_data['Revenue'], label='Revenue', color='blue')
-        plt.plot(monthly_data['Date'], monthly_data['Profit'], label='Profit', color='green')
-        plt.xlabel("Month-Year")
-        plt.ylabel("Amount")
-        plt.title("Monthly Revenue and Profit")
+        start_date = input("enter start mont with year in this format ex :2013-01")
+        end_date = input("enter start mont with year in this format ex :2014-01")
+
+        # Filter data for the specified range
+        filtered_data = monthly_data[(monthly_data['Date'] >= start_date) & (monthly_data['Date'] <= end_date)]
+
+        # Plotting revenue and profit trends
+        plt.figure(figsize=(12, 6))
+        plt.plot(filtered_data['Date'], filtered_data['Revenue'], label='Revenue', marker='o', color='blue')
+        plt.plot(filtered_data['Date'], filtered_data['Profit'], label='Profit', marker='s', color='green')
+
+        # Add labels, title, legend, and grid
+        plt.xlabel('Month-Year')
+        plt.ylabel('Amount')
+        plt.title('Revenue and Profit Trends')
         plt.legend()
+        plt.grid(True)
+        plt.tight_layout()
+
+        # Show the plot
         plt.show()
 
     def profit_margin_per_product(self):
